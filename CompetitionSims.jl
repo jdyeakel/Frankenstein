@@ -1,17 +1,22 @@
 using ODE
 using Gadfly
 
-a_mh = 0.5;
-a_hm = 0.5;
-k_m = 100;
-k_h = 100;
-r_h = 0.5;
-r_m = 0.5;
+a_hm = 1.5;
+a_mh = a_hm/2;
+k = 10*10^9;
+r_h = 0.0067;
+r_m = 0.0067;
 
-initial = [20.0,10.0];
+initial = [1.09*10^9,1.0];
 
 include("/home/jdyeakel/Dropbox/PostDoc/2016_Frankenstein/src/frank_comp.jl")
-T, den = ode23(frank_comp, initial, [0., 40]);
+T, den = ode45(frank_comp, initial, [0., 10.0^7]);
 den = hcat(den...)';
 
-plot(x=T,y=den[:,1],Geom.line)
+plot(
+  layer(x=T,y=den[:,1],Geom.line),
+  layer(x=T,y=den[:,2],Geom.line),
+  Scale.y_log10
+  )
+
+for i=1:
