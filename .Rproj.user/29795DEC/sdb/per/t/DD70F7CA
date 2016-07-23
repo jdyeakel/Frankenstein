@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Comp_func <- function(t, state, parameters) {\n  with(as.list(c(state,parameters)), {\n    \n    #Rate of change\n    dH <- Rh*H*(1 - ((H + a_hm*M)/Kh))\n    dM <- Rm*M*(1 - ((M + a_mh*H)/Km))\n    \n    #Return rate of change\n    list(c(dH,dM))\n  }) #end with statement\n  \n}",
+    "created" : 1469137579606.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4089629522",
+    "id" : "DD70F7CA",
+    "lastKnownWriteTime" : 1464298171,
+    "last_content_update" : 1464298171,
+    "path" : "~/Dropbox/PostDoc/2016_Frankenstein/R/Comp_func.R",
+    "project_path" : "R/Comp_func.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

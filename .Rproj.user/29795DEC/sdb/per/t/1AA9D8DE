@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(deSolve)\nlibrary(RColorBrewer)\n\n#Simulate human-monster dynamics\nsource(\"R/Comp_func.R\")\n\nstate <- c(\n  H = 100,        #Humans\n  M = 1          #Monsters\n  )               \n\nparameters <- c(\n  Rh = 0.5,\n  Rm = 0.5,\n  a_hm = 0.8, #Effect of monsters on humans (higher means monsters outcompete humans more)\n  a_mh = 0.8,   #Effect of humans on monsters\n  Kh = 200,\n  Km = 200\n)\n\nEqH <- (Kh + a_hm*Km)/(1-a_mh*a_hm)\nEqM <- (Km + a_mh*Kh)/(1-a_mh*a_hm)\n\n\ntime <- seq(0,5000, by = 0.1)\n\nout <- ode(y = state, times = time, func = Comp_func, parms = parameters)\n\nplot(out[,1],out[,2],type=\"l\",ylim=c(0,200))\nlines(out[,1],out[,3],lty=2)\n\n\n\n",
+    "created" : 1469137577409.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1240838561",
+    "id" : "1AA9D8DE",
+    "lastKnownWriteTime" : 1464383959,
+    "last_content_update" : 1464383959,
+    "path" : "~/Dropbox/PostDoc/2016_Frankenstein/CompetitionSims.R",
+    "project_path" : "CompetitionSims.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
