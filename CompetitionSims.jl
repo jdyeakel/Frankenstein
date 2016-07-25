@@ -20,9 +20,9 @@ plot(
 
 ########################
 
-avec = collect(1.0:0.1:10.0);
+avec = collect(1.0:0.05:10.0);
 lavec = length(avec);
-cvec = collect(1.0:1.0:10.0)
+cvec = collect(1.0:1.0:10.0);
 lcvec = length(cvec);
 t_ext = zeros(lavec,lcvec);
 
@@ -78,9 +78,9 @@ end
 #2) world simulation
 ########################
 
-avec = collect(1.0:0.1:10.0);
+avec = collect(1.0:0.05:10.0);
 lavec = length(avec);
-cvec = collect(1.0:1.0:10.0)
+cvec = collect(1.0:1.0:10.0);
 lcvec = length(cvec);
 t_extam = zeros(lavec,lcvec);
 
