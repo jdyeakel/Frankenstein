@@ -134,6 +134,8 @@ for j=1:lcvec
   print(j)
 end
 
+writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam.csv",t_extam);
+writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_text.csv",t_ext);
 
 ext_plot=plot(
 [layer(y=t_ext[:,j],x=avec, Geom.line, Theme(default_color=colorant"red")) for j in 1:lcvec]...,
