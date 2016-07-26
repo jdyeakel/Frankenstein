@@ -137,6 +137,9 @@ end
 writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam.csv",t_extam);
 writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_text.csv",t_ext);
 
+t_extam=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam.csv");
+t_ext=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_text.csv");
+
 ext_plot=plot(
 [layer(y=t_ext[:,j],x=avec, Geom.line, Theme(default_color=colorant"red")) for j in 1:lcvec]...,
 [layer(y=t_extam[:,j],x=avec, Geom.line) for j in 1:lcvec]...,
