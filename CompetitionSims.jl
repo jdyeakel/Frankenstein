@@ -1,6 +1,6 @@
 using ODE
 using Gadfly
-include("/home/jdyeakel/Dropbox/PostDoc/2016_Frankenstein/src/frank_comp.jl")
+include("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/src/frank_comp.jl")
 
 a_hm = 5.5;
 a_mh = a_hm/10;
@@ -84,8 +84,10 @@ cvec = collect(1.0:1.0:10.0);
 lcvec = length(cvec);
 t_extam = zeros(lavec,lcvec);
 
-#k = 10.0*10^9; #Global
-k = 0.01*0.4*500.0*10^6 #Amazon
+
+k = 0.01*0.4*500.0*10^6 #Amazon estimated
+#k = 0.1*0.4*500.0*10^6 #Amazon klarge
+#k = 0.001*0.4*500.0*10^6 #Amazon ksmall
 r_h = 0.0067;
 r_m = 0.0067;
 thresh = 1000.0;
