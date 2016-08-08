@@ -249,12 +249,15 @@ t_extam=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam2_lowdea
 t_ext=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textEU_lowdeath.csv");
 
 ext_plot=plot(
-[layer(y=t_ext[:,j],x=avec, Geom.line, Theme(default_color=colorant"red")) for j in 1:lcvec]...,
-[layer(y=t_extam[:,j],x=avec, Geom.line, Theme(default_color=colorant"blue")) for j in 1:lcvec]...,
-Coord.Cartesian(xmin=1, xmax=10, ymin=1000,ymax=1.5*10^4),
-Guide.xlabel("Monster aggressiveness"),Guide.ylabel("Time to extinction"))
+[layer(y=t_ext[:,j],x=avec, Geom.line, Theme(default_color=colorant"black")) for j in 1:lcvec]...,
 
-draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_ext_AmCat.pdf", 5inch, 5inch), ext_plot)
+[layer(y=t_extam[:,j],x=avec, Geom.line, Theme(default_color=colorant"black")) for j in 1:lcvec]...,
+[layer(y=t_extam[:,j],x=avec, Geom.point, Theme(default_color=colorant"black",default_point_size=1pt, highlight_width = 0pt)) for j in 1:lcvec]...,
+
+Coord.Cartesian(xmin=1, xmax=9, ymin=4000,ymax=1.5*10^4),
+Guide.xlabel("Creature competitiveness"),Guide.ylabel("Time to human extinction"));
+
+draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_ext_AmCat.pdf", 3inch, 3inch), ext_plot)
 
 
 
@@ -399,14 +402,15 @@ TdenEU=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/traj_EUa2c4.csv")
 
 traj_plot = plot(
 #Amazon Catalyst
-layer(x=TdenAM[:,1],y=TdenAM[:,2],Geom.point,Theme(default_color=colorant"blue",default_point_size=1.4pt, highlight_width = 0pt)),
+layer(x=TdenAM[:,1],y=TdenAM[:,2],Geom.point,Theme(default_color=colorant"blue",default_point_size=1pt, highlight_width = 0pt)),
 layer(x=TdenAM[:,1],y=TdenAM[:,2],Geom.line,Theme(default_color=colorant"blue")),
 
-layer(x=TdenAM[:,1],y=TdenAM[:,3],Geom.point,Theme(default_color=colorant"green",default_point_size=1.4pt, highlight_width = 0pt)),
+layer(x=TdenAM[:,1],y=TdenAM[:,3],Geom.point,Theme(default_color=colorant"green",default_point_size=1pt, highlight_width = 0pt)),
 layer(x=TdenAM[:,1],y=TdenAM[:,3],Geom.line,Theme(default_color=colorant"green")),
 
 #European Catalyst
 layer(x=TdenEU[:,1],y=TdenEU[:,2],Geom.line,Theme(default_color=colorant"blue")),
 layer(x=TdenEU[:,1],y=TdenEU[:,3],Geom.line,Theme(default_color=colorant"green")),
-Scale.x_log10,Scale.y_log10,Coord.cartesian(ymin=0,ymax=12,xmin=2,xmax=4.0));
-draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_trajEUAM.pdf", 5inch, 5inch), traj_plot)
+Scale.x_log10,Scale.y_log10,Coord.cartesian(ymin=0,ymax=12,xmin=3.0,xmax=4.0),Guide.xlabel("Time after 1816"),Guide.ylabel("Population density"));
+
+draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_trajEUAM.pdf", 3inch, 3inch), traj_plot)
