@@ -1,0 +1,2060 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    102988,       2051]
+NotebookOptionsPosition[    102341,       2024]
+NotebookOutlinePosition[    102701,       2040]
+CellTagsIndexPosition[    102658,       2037]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\</Users/justinyeakel/Dropbox/PostDoc/2016_Frankenstein/\
+initalvext2stage.csv\>\"", ",", "\"\<table\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.68002692922532*^9, 3.680026931266842*^9}, {
+  3.6800269771829576`*^9, 3.680027008365117*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"plotdata", "=", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"10", "*", 
+         RowBox[{"10", "^", "i"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"-", "1"}], ",", "9", ",", "0.01"}], "}"}]}], "]"}], ",", 
+      RowBox[{"Flatten", "[", "data", "]"}]}], "}"}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.680027217370954*^9, 3.680027225129847*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLogLogPlot", "[", 
+  RowBox[{"plotdata", ",", 
+   RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Initial population size\>\"", ",", "\"\<Time to extinction\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.680026993315136*^9, 3.680027088364682*^9}, {
+  3.680027166581513*^9, 3.6800272813442087`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.011111111111111112`],
+      AbsoluteThickness[1.6], PointBox[CompressedData["
+1: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
+      "]]}, {}}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.72307472157076, 13.434568185534104`},
+  CoordinatesToolOptions:>{"DisplayFunction" -> ({
+      Exp[
+       Part[#, 1]], 
+      Exp[
+       Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+      Exp[
+       Part[#, 1]], 
+      Exp[
+       Part[#, 2]]}& )},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox["\"Time to extinction\"", TraditionalForm], None}, {
+     FormBox["\"Initial population size\"", TraditionalForm], None}},
+  FrameTicks->FrontEndValueCache[{{
+      Charting`ScaledTicks[{Log, Exp}], 
+      Charting`ScaledFrameTicks[{Log, Exp}]}, {
+      Charting`ScaledTicks[{Log, Exp}], 
+      Charting`ScaledFrameTicks[{Log, Exp}]}}, {{{{13.815510557964274`, 
+        FormBox[
+         TemplateBox[{"\[Times]", "\"\[Times]\"", "1", 
+           
+           TemplateBox[{"10", "6"}, "Superscript", SyntaxForm -> 
+            SuperscriptBox]}, "RowWithSeparators"], TraditionalForm], {0.01, 
+        0.}, {
+         AbsoluteThickness[0.1]}}, {14.508657738524219`, 
+        FormBox[
+         TemplateBox[{"\[Times]", "\"\[Times]\"", "2", 
+           
+           TemplateBox[{"10", "6"}, "Superscript", SyntaxForm -> 
+            SuperscriptBox]}, "RowWithSeparators"], TraditionalForm], {0.01, 
+        0.}, {
+         AbsoluteThickness[0.1]}}, {15.424948470398375`, 
+        FormBox[
+         TemplateBox[{"\[Times]", "\"\[Times]\"", "5", 
+           
+           TemplateBox[{"10", "6"}, "Superscript", SyntaxForm -> 
+            SuperscriptBox]}, "RowWithSeparators"], TraditionalForm], {0.01, 
+        0.}, {
+         AbsoluteThickness[0.1]}}, {16.11809565095832, 
+        FormBox[
+         TemplateBox[{"\[Times]", "\"\[Times]\"", "1", 
+           
+           TemplateBox[{"10", "7"}, "Superscript", SyntaxForm -> 
+            SuperscriptBox]}, "RowWithSeparators"], TraditionalForm], {0.01, 
+        0.}, {
+         AbsoluteThickness[0.1]}}, {13.122363377404328`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.304684934198283`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.458835614025542`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.592367006650065`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.710150042306449`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {14.22097566607244, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {14.914122846632385`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.201804919084164`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.60727002719233, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.761420707019587`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.89495209964411, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.012735135300492`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.523560759066484`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.811242831518264`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}}, {{13.815510557964274`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {14.508657738524219`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.424948470398375`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.11809565095832, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.122363377404328`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.304684934198283`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.458835614025542`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.592367006650065`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.710150042306449`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {14.22097566607244, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {14.914122846632385`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.201804919084164`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.60727002719233, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.761420707019587`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {15.89495209964411, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.012735135300492`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.523560759066484`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {16.811242831518264`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}}}, {{{4.605170185988092, 
+        FormBox["100", TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.907755278982137, 
+        FormBox["1000", TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {9.210340371976184, 
+        FormBox[
+         TemplateBox[{"10", "4"}, "Superscript", SyntaxForm -> 
+          SuperscriptBox], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.512925464970229`, 
+        FormBox[
+         TemplateBox[{"10", "5"}, "Superscript", SyntaxForm -> 
+          SuperscriptBox], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {2.302585092994046, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {2.995732273553991, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {3.4011973816621555`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {3.6888794541139363`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {3.912023005428146, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.0943445622221, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.248495242049359, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.382026634673881, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.499809670330265, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {5.298317366548036, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {5.703782474656201, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {5.991464547107982, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.214608098422191, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.396929655216146, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.551080335043404, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.684611727667927, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.802394763324311, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {7.600902459542082, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.006367567650246, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.294049640102028, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.517193191416238, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.699514748210191, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.85366542803745, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.987196820661973, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {9.104979856318357, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {9.903487552536127, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {10.308952660644293`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {10.596634733096073`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {10.819778284410283`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.002099841204238`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.156250521031495`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.289781913656018`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.407564949312402`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {12.206072645530174`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {12.611537753638338`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {12.89921982609012, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.122363377404328`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.304684934198283`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.458835614025542`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.592367006650065`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.710150042306449`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.815510557964274`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}}, {{4.605170185988092, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.907755278982137, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {9.210340371976184, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.512925464970229`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.01, 0.}, {
+         AbsoluteThickness[0.1]}}, {2.302585092994046, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {2.995732273553991, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {3.4011973816621555`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {3.6888794541139363`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {3.912023005428146, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.0943445622221, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.248495242049359, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.382026634673881, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {4.499809670330265, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {5.298317366548036, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {5.703782474656201, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {5.991464547107982, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.214608098422191, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.396929655216146, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.551080335043404, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.684611727667927, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {6.802394763324311, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {7.600902459542082, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.006367567650246, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.294049640102028, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.517193191416238, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.699514748210191, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.85366542803745, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {8.987196820661973, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {9.104979856318357, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {9.903487552536127, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {10.308952660644293`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {10.596634733096073`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {10.819778284410283`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.002099841204238`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.156250521031495`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.289781913656018`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {11.407564949312402`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {12.206072645530174`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {12.611537753638338`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {12.89921982609012, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.122363377404328`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.304684934198283`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.458835614025542`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.592367006650065`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.710150042306449`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}, {13.815510557964274`, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
+         AbsoluteThickness[0.1]}}}}}],
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{635.0546875, Automatic},
+  Method->{},
+  PlotRange->{{3.865944430091462, 13.00960577541636}, {13.47713264920675, 
+   16.116129396910814`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{
+    Charting`ScaledTicks[{Log, Exp}], 
+    Charting`ScaledTicks[{Log, Exp}]}]], "Output",
+ CellChangeTimes->{{3.680026995654208*^9, 3.680027006399143*^9}, {
+   3.680027079649022*^9, 3.680027088814968*^9}, {3.680027167225819*^9, 
+   3.680027185670227*^9}, 3.680027229911113*^9, 3.680027283964588*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"10", "*", 
+    RowBox[{"10", "^", "i"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"-", "1"}], ",", "9", ",", "0.01"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.680027149660426*^9, 3.680027156842765*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1.`", ",", "1.023292992280754`", ",", "1.0471285480508996`", ",", 
+   "1.0715193052376066`", ",", "1.096478196143185`", ",", 
+   "1.1220184543019636`", ",", "1.148153621496883`", ",", 
+   "1.1748975549395297`", ",", "1.202264434617413`", ",", 
+   "1.2302687708123814`", ",", "1.2589254117941673`", ",", 
+   "1.2882495516931338`", ",", "1.318256738556407`", ",", 
+   "1.3489628825916535`", ",", "1.380384264602885`", ",", 
+   "1.4125375446227544`", ",", "1.4454397707459277`", ",", 
+   "1.4791083881682077`", ",", "1.513561248436208`", ",", 
+   "1.548816618912481`", ",", "1.5848931924611134`", ",", 
+   "1.6218100973589298`", ",", "1.6595869074375604`", ",", 
+   "1.6982436524617441`", ",", "1.7378008287493754`", ",", 
+   "1.778279410038923`", ",", "1.8197008586099837`", ",", 
+   "1.8620871366628675`", ",", "1.9054607179632475`", ",", 
+   "1.9498445997580456`", ",", "1.9952623149688797`", ",", 
+   "2.0417379446695296`", ",", "2.0892961308540396`", ",", 
+   "2.1379620895022327`", ",", "2.187761623949553`", ",", "2.23872113856834`",
+    ",", "2.2908676527677727`", ",", "2.344228815319922`", ",", 
+   "2.3988329190194904`", ",", "2.4547089156850306`", ",", 
+   "2.51188643150958`", ",", "2.570395782768864`", ",", "2.6302679918953813`",
+    ",", "2.6915348039269156`", ",", "2.7542287033381663`", ",", 
+   "2.8183829312644537`", ",", "2.8840315031266055`", ",", 
+   "2.951209226666385`", ",", "3.019951720402016`", ",", 
+   "3.0902954325135905`", ",", "3.1622776601683795`", ",", 
+   "3.2359365692962827`", ",", "3.311311214825911`", ",", 
+   "3.3884415613920256`", ",", "3.4673685045253166`", ",", 
+   "3.5481338923357546`", ",", "3.630780547701014`", ",", 
+   "3.7153522909717256`", ",", "3.8018939632056115`", ",", 
+   "3.8904514499428053`", ",", "3.981071705534972`", ",", 
+   "4.073802778041127`", ",", "4.168693834703355`", ",", "4.265795188015927`",
+    ",", "4.36515832240166`", ",", "4.466835921509632`", ",", 
+   "4.570881896148751`", ",", "4.677351412871983`", ",", "4.786300923226384`",
+    ",", "4.8977881936844625`", ",", "5.011872336272724`", ",", 
+   "5.1286138399136485`", ",", "5.248074602497725`", ",", 
+   "5.370317963702527`", ",", "5.495408738576245`", ",", "5.623413251903491`",
+    ",", "5.7543993733715695`", ",", "5.8884365535558905`", ",", 
+   "6.025595860743578`", ",", "6.165950018614822`", ",", "6.309573444801933`",
+    ",", "6.456542290346556`", ",", "6.606934480075961`", ",", 
+   "6.760829753919819`", ",", "6.918309709189364`", ",", "7.079457843841379`",
+    ",", "7.2443596007499`", ",", "7.413102413009175`", ",", 
+   "7.5857757502918375`", ",", "7.762471166286917`", ",", 
+   "7.943282347242815`", ",", "8.128305161640993`", ",", "8.31763771102671`", 
+   ",", "8.511380382023766`", ",", "8.709635899560809`", ",", 
+   "8.912509381337458`", ",", "9.120108393559097`", ",", "9.33254300796991`", 
+   ",", "9.549925860214358`", ",", "9.772372209558107`", ",", "10.`", ",", 
+   "10.232929922807541`", ",", "10.471285480508996`", ",", 
+   "10.715193052376064`", ",", "10.96478196143185`", ",", 
+   "11.220184543019636`", ",", "11.481536214968829`", ",", 
+   "11.748975549395297`", ",", "12.022644346174133`", ",", 
+   "12.302687708123818`", ",", "12.589254117941675`", ",", 
+   "12.882495516931343`", ",", "13.182567385564074`", ",", 
+   "13.48962882591654`", ",", "13.803842646028851`", ",", 
+   "14.125375446227547`", ",", "14.454397707459272`", ",", 
+   "14.791083881682072`", ",", "15.13561248436208`", ",", 
+   "15.488166189124811`", ",", "15.848931924611133`", ",", 
+   "16.218100973589298`", ",", "16.595869074375603`", ",", 
+   "16.982436524617444`", ",", "17.378008287493753`", ",", 
+   "17.78279410038923`", ",", "18.197008586099834`", ",", 
+   "18.620871366628677`", ",", "19.054607179632473`", ",", 
+   "19.498445997580454`", ",", "19.952623149688797`", ",", 
+   "20.417379446695296`", ",", "20.892961308540396`", ",", 
+   "21.379620895022327`", ",", "21.87761623949553`", ",", "22.3872113856834`",
+    ",", "22.908676527677734`", ",", "23.44228815319923`", ",", 
+   "23.98832919019491`", ",", "24.547089156850312`", ",", 
+   "25.11886431509581`", ",", "25.703957827688633`", ",", 
+   "26.302679918953814`", ",", "26.91534803926915`", ",", 
+   "27.542287033381662`", ",", "28.183829312644537`", ",", 
+   "28.840315031266055`", ",", "29.512092266663856`", ",", 
+   "30.19951720402016`", ",", "30.902954325135905`", ",", 
+   "31.622776601683796`", ",", "32.359365692962825`", ",", 
+   "33.11311214825911`", ",", "33.884415613920254`", ",", 
+   "34.673685045253166`", ",", "35.48133892335755`", ",", 
+   "36.30780547701014`", ",", "37.15352290971726`", ",", "38.01893963205613`",
+    ",", "38.90451449942807`", ",", "39.810717055349734`", ",", 
+   "40.73802778041128`", ",", "41.686938347033546`", ",", 
+   "42.65795188015928`", ",", "43.65158322401661`", ",", "44.66835921509633`",
+    ",", "45.708818961487516`", ",", "46.77351412871981`", ",", 
+   "47.863009232263835`", ",", "48.97788193684462`", ",", 
+   "50.11872336272722`", ",", "51.28613839913648`", ",", "52.48074602497725`",
+    ",", "53.703179637025265`", ",", "54.954087385762456`", ",", 
+   "56.234132519034915`", ",", "57.543993733715695`", ",", 
+   "58.8843655355589`", ",", "60.25595860743578`", ",", "61.65950018614822`", 
+   ",", "63.095734448019336`", ",", "64.56542290346556`", ",", 
+   "66.06934480075961`", ",", "67.60829753919819`", ",", "69.18309709189366`",
+    ",", "70.79457843841381`", ",", "72.44359600749902`", ",", 
+   "74.13102413009177`", ",", "75.85775750291839`", ",", "77.6247116628692`", 
+   ",", "79.43282347242817`", ",", "81.28305161640995`", ",", 
+   "83.17637711026708`", ",", "85.11380382023762`", ",", "87.09635899560806`",
+    ",", "89.12509381337455`", ",", "91.20108393559096`", ",", 
+   "93.3254300796991`", ",", "95.49925860214358`", ",", "97.72372209558107`", 
+   ",", "100.`", ",", "102.32929922807546`", ",", "104.71285480508996`", ",", 
+   "107.15193052376071`", ",", "109.64781961431852`", ",", 
+   "112.20184543019629`", ",", "114.81536214968828`", ",", 
+   "117.48975549395291`", ",", "120.22644346174131`", ",", 
+   "123.02687708123811`", ",", "125.89254117941675`", ",", 
+   "128.82495516931334`", ",", "131.82567385564073`", ",", 
+   "134.89628825916532`", ",", "138.03842646028852`", ",", 
+   "141.2537544622754`", ",", "144.54397707459282`", ",", 
+   "147.91083881682073`", ",", "151.35612484362088`", ",", 
+   "154.88166189124811`", ",", "158.48931924611142`", ",", 
+   "162.18100973589299`", ",", "165.95869074375614`", ",", 
+   "169.82436524617444`", ",", "173.78008287493765`", ",", 
+   "177.82794100389228`", ",", "181.97008586099844`", ",", 
+   "186.20871366628677`", ",", "190.54607179632484`", ",", 
+   "194.98445997580455`", ",", "199.52623149688807`", ",", 
+   "204.17379446695296`", ",", "208.92961308540384`", ",", 
+   "213.79620895022325`", ",", "218.7761623949552`", ",", "223.872113856834`",
+    ",", "229.08676527677724`", ",", "234.42288153199226`", ",", 
+   "239.883291901949`", ",", "245.47089156850313`", ",", 
+   "251.18864315095794`", ",", "257.03957827688646`", ",", 
+   "263.0267991895381`", ",", "269.1534803926917`", ",", "275.4228703338166`",
+    ",", "281.83829312644554`", ",", "288.4031503126606`", ",", 
+   "295.1209226666387`", ",", "301.9951720402016`", ",", "309.0295432513592`",
+    ",", "316.2277660168379`", ",", "323.5936569296285`", ",", 
+   "331.13112148259114`", ",", "338.84415613920277`", ",", 
+   "346.73685045253166`", ",", "354.81338923357566`", ",", 
+   "363.0780547701014`", ",", "371.5352290971724`", ",", 
+   "380.18939632056123`", ",", "389.04514499428046`", ",", 
+   "398.1071705534973`", ",", "407.38027780411255`", ",", 
+   "416.86938347033555`", ",", "426.57951880159254`", ",", 
+   "436.5158322401661`", ",", "446.683592150963`", ",", "457.08818961487515`",
+    ",", "467.7351412871981`", ",", "478.63009232263846`", ",", 
+   "489.7788193684461`", ",", "501.1872336272725`", ",", "512.8613839913648`",
+    ",", "524.8074602497728`", ",", "537.0317963702528`", ",", 
+   "549.5408738576249`", ",", "562.341325190349`", ",", "575.4399373371573`", 
+   ",", "588.843655355589`", ",", "602.5595860743581`", ",", 
+   "616.5950018614822`", ",", "630.9573444801937`", ",", "645.6542290346556`",
+    ",", "660.6934480075959`", ",", "676.0829753919819`", ",", 
+   "691.8309709189363`", ",", "707.945784384138`", ",", "724.4359600749898`", 
+   ",", "741.3102413009177`", ",", "758.5775750291837`", ",", 
+   "776.2471166286921`", ",", "794.3282347242814`", ",", "812.8305161640994`",
+    ",", "831.7637711026708`", ",", "851.1380382023767`", ",", 
+   "870.9635899560806`", ",", "891.2509381337459`", ",", "912.0108393559098`",
+    ",", "933.2543007969914`", ",", "954.9925860214358`", ",", 
+   "977.2372209558112`", ",", "1000.`", ",", "1023.2929922807547`", ",", 
+   "1047.1285480508996`", ",", "1071.5193052376069`", ",", 
+   "1096.478196143185`", ",", "1122.018454301964`", ",", 
+   "1148.1536214968828`", ",", "1174.8975549395302`", ",", 
+   "1202.2644346174131`", ",", "1230.268770812381`", ",", 
+   "1258.9254117941675`", ",", "1288.2495516931338`", ",", 
+   "1318.2567385564073`", ",", "1348.9628825916532`", ",", 
+   "1380.3842646028852`", ",", "1412.537544622754`", ",", 
+   "1445.439770745928`", ",", "1479.1083881682073`", ",", 
+   "1513.5612484362086`", ",", "1548.816618912481`", ",", 
+   "1584.8931924611143`", ",", "1621.8100973589299`", ",", 
+   "1659.5869074375614`", ",", "1698.2436524617444`", ",", 
+   "1737.8008287493763`", ",", "1778.2794100389228`", ",", 
+   "1819.7008586099844`", ",", "1862.0871366628674`", ",", 
+   "1905.4607179632485`", ",", "1949.8445997580457`", ",", 
+   "1995.2623149688807`", ",", "2041.7379446695295`", ",", 
+   "2089.2961308540407`", ",", "2137.9620895022326`", ",", 
+   "2187.761623949552`", ",", "2238.72113856834`", ",", "2290.8676527677726`",
+    ",", "2344.2288153199224`", ",", "2398.83291901949`", ",", 
+   "2454.708915685031`", ",", "2511.88643150958`", ",", "2570.3957827688646`",
+    ",", "2630.267991895382`", ",", "2691.5348039269165`", ",", 
+   "2754.2287033381663`", ",", "2818.382931264455`", ",", 
+   "2884.0315031266055`", ",", "2951.209226666387`", ",", 
+   "3019.9517204020162`", ",", "3090.295432513592`", ",", 
+   "3162.2776601683795`", ",", "3235.9365692962842`", ",", 
+   "3311.3112148259106`", ",", "3388.441561392028`", ",", 
+   "3467.3685045253164`", ",", "3548.1338923357566`", ",", 
+   "3630.7805477010143`", ",", "3715.3522909717276`", ",", 
+   "3801.8939632056126`", ",", "3890.4514499428046`", ",", 
+   "3981.0717055349733`", ",", "4073.802778041126`", ",", 
+   "4168.693834703355`", ",", "4265.795188015925`", ",", "4365.158322401661`",
+    ",", "4466.83592150963`", ",", "4570.881896148752`", ",", 
+   "4677.351412871982`", ",", "4786.300923226385`", ",", 
+   "4897.7881936844615`", ",", "5011.872336272725`", ",", 
+   "5128.613839913649`", ",", "5248.074602497728`", ",", "5370.317963702527`",
+    ",", "5495.408738576248`", ",", "5623.41325190349`", ",", 
+   "5754.399373371572`", ",", "5888.43655355589`", ",", "6025.5958607435805`",
+    ",", "6165.950018614822`", ",", "6309.573444801937`", ",", 
+   "6456.542290346556`", ",", "6606.9344800759645`", ",", 
+   "6760.829753919819`", ",", "6918.309709189362`", ",", "7079.457843841381`",
+    ",", "7244.359600749899`", ",", "7413.102413009177`", ",", 
+   "7585.775750291836`", ",", "7762.4711662869195`", ",", 
+   "7943.282347242813`", ",", "8128.305161640996`", ",", "8317.637711026708`",
+    ",", "8511.380382023768`", ",", "8709.635899560806`", ",", 
+   "8912.509381337459`", ",", "9120.108393559096`", ",", "9332.543007969914`",
+    ",", "9549.92586021436`", ",", "9772.37220955811`", ",", "10000.`", ",", 
+   "10232.929922807536`", ",", "10471.285480509006`", ",", 
+   "10715.193052376071`", ",", "10964.781961431852`", ",", 
+   "11220.18454301963`", ",", "11481.53621496884`", ",", 
+   "11748.975549395302`", ",", "12022.644346174131`", ",", 
+   "12302.68770812381`", ",", "12589.254117941662`", ",", 
+   "12882.495516931349`", ",", "13182.567385564074`", ",", 
+   "13489.628825916532`", ",", "13803.84264602884`", ",", 
+   "14125.375446227554`", ",", "14454.39770745928`", ",", 
+   "14791.083881682072`", ",", "15135.612484362073`", ",", 
+   "15488.166189124826`", ",", "15848.93192461114`", ",", 
+   "16218.100973589299`", ",", "16595.869074375594`", ",", 
+   "16982.43652461746`", ",", "17378.00828749376`", ",", 
+   "17782.794100389227`", ",", "18197.008586099826`", ",", 
+   "18620.871366628693`", ",", "19054.607179632483`", ",", 
+   "19498.445997580453`", ",", "19952.62314968879`", ",", 
+   "20417.37944669532`", ",", "20892.961308540405`", ",", 
+   "21379.620895022326`", ",", "21877.616239495517`", ",", 
+   "22387.211385683422`", ",", "22908.676527677748`", ",", 
+   "23442.288153199228`", ",", "23988.329190194898`", ",", 
+   "24547.089156850285`", ",", "25118.86431509582`", ",", 
+   "25703.957827688646`", ",", "26302.679918953814`", ",", 
+   "26915.348039269138`", ",", "27542.28703338169`", ",", 
+   "28183.82931264455`", ",", "28840.31503126606`", ",", "29512.09226666384`",
+    ",", "30199.51720402019`", ",", "30902.95432513592`", ",", 
+   "31622.776601683796`", ",", "32359.365692962812`", ",", 
+   "33113.11214825914`", ",", "33884.415613920275`", ",", 
+   "34673.685045253165`", ",", "35481.33892335753`", ",", 
+   "36307.80547701017`", ",", "37153.52290971728`", ",", "38018.93963205613`",
+    ",", "38904.51449942805`", ",", "39810.71705534977`", ",", 
+   "40738.0277804113`", ",", "41686.938347033545`", ",", "42657.95188015925`",
+    ",", "43651.58322401657`", ",", "44668.35921509635`", ",", 
+   "45708.818961487515`", ",", "46773.514128719806`", ",", 
+   "47863.0092322638`", ",", "48977.88193684466`", ",", "50118.72336272725`", 
+   ",", "51286.13839913648`", ",", "52480.746024977234`", ",", 
+   "53703.17963702532`", ",", "54954.08738576248`", ",", "56234.13251903491`",
+    ",", "57543.99373371566`", ",", "58884.365535558965`", ",", 
+   "60255.95860743581`", ",", "61659.50018614822`", ",", "63095.7344480193`", 
+   ",", "64565.422903465624`", ",", "66069.34480075965`", ",", 
+   "67608.29753919819`", ",", "69183.09709189362`", ",", "70794.57843841388`",
+    ",", "72443.59600749906`", ",", "74131.02413009177`", ",", 
+   "75857.75750291836`", ",", "77624.71166286911`", ",", "79432.82347242822`",
+    ",", "81283.05161640995`", ",", "83176.37711026709`", ",", 
+   "85113.80382023759`", ",", "87096.35899560814`", ",", "89125.09381337458`",
+    ",", "91201.08393559096`", ",", "93325.43007969906`", ",", 
+   "95499.25860214369`", ",", "97723.72209558112`", ",", "100000.`", ",", 
+   "102329.29922807537`", ",", "104712.85480509006`", ",", 
+   "107151.9305237607`", ",", "109647.8196143185`", ",", 
+   "112201.84543019629`", ",", "114815.36214968842`", ",", 
+   "117489.75549395304`", ",", "120226.4434617413`", ",", 
+   "123026.87708123811`", ",", "125892.54117941688`", ",", 
+   "128824.95516931349`", ",", "131825.67385564075`", ",", 
+   "134896.28825916533`", ",", "138038.42646028838`", ",", 
+   "141253.75446227554`", ",", "144543.9770745928`", ",", 
+   "147910.83881682073`", ",", "151356.1248436207`", ",", 
+   "154881.66189124828`", ",", "158489.3192461114`", ",", "162181.009735893`",
+    ",", "165958.690743756`", ",", "169824.3652461746`", ",", 
+   "173780.08287493762`", ",", "177827.94100389228`", ",", 
+   "181970.08586099825`", ",", "186208.71366628693`", ",", 
+   "190546.07179632483`", ",", "194984.45997580455`", ",", 
+   "199526.2314968879`", ",", "204173.79446695314`", ",", 
+   "208929.6130854041`", ",", "213796.20895022323`", ",", 
+   "218776.16239495517`", ",", "223872.1138568342`", ",", 
+   "229086.76527677747`", ",", "234422.8815319923`", ",", 
+   "239883.29190194898`", ",", "245470.89156850285`", ",", 
+   "251188.64315095823`", ",", "257039.57827688646`", ",", 
+   "263026.7991895381`", ",", "269153.4803926914`", ",", "275422.8703338169`",
+    ",", "281838.2931264455`", ",", "288403.1503126606`", ",", 
+   "295120.9226666384`", ",", "301995.1720402019`", ",", "309029.5432513592`",
+    ",", "316227.7660168379`", ",", "323593.6569296281`", ",", 
+   "331131.1214825915`", ",", "338844.15613920277`", ",", 
+   "346736.85045253165`", ",", "354813.3892335753`", ",", 
+   "363078.05477010173`", ",", "371535.2290971728`", ",", 
+   "380189.3963205613`", ",", "389045.1449942805`", ",", 
+   "398107.17055349774`", ",", "407380.27780411305`", ",", 
+   "416869.3834703355`", ",", "426579.5188015926`", ",", "436515.8322401656`",
+    ",", "446683.59215096344`", ",", "457088.1896148751`", ",", 
+   "467735.1412871981`", ",", "478630.092322638`", ",", "489778.81936844665`",
+    ",", "501187.23362727254`", ",", "512861.3839913648`", ",", 
+   "524807.4602497723`", ",", "537031.7963702533`", ",", "549540.8738576248`",
+    ",", "562341.3251903491`", ",", "575439.9373371566`", ",", 
+   "588843.6553555896`", ",", "602559.5860743581`", ",", "616595.0018614823`",
+    ",", "630957.344480193`", ",", "645654.2290346562`", ",", 
+   "660693.4480075964`", ",", "676082.9753919819`", ",", "691830.9709189362`",
+    ",", "707945.7843841389`", ",", "724435.9600749905`", ",", 
+   "741310.2413009177`", ",", "758577.5750291836`", ",", "776247.1166286911`",
+    ",", "794328.234724282`", ",", "812830.5161640996`", ",", 
+   "831763.7711026708`", ",", "851138.0382023759`", ",", "870963.5899560815`",
+    ",", "891250.9381337459`", ",", "912010.8393559097`", ",", 
+   "933254.3007969905`", ",", "954992.5860214368`", ",", "977237.2209558112`",
+    ",", "1.`*^6", ",", "1.0232929922807537`*^6", ",", 
+   "1.0471285480509007`*^6", ",", "1.071519305237607`*^6", ",", 
+   "1.096478196143185`*^6", ",", "1.1220184543019629`*^6", ",", 
+   "1.148153621496884`*^6", ",", "1.1748975549395303`*^6", ",", 
+   "1.202264434617413`*^6", ",", "1.230268770812381`*^6", ",", 
+   "1.2589254117941689`*^6", ",", "1.288249551693135`*^6", ",", 
+   "1.3182567385564074`*^6", ",", "1.3489628825916534`*^6", ",", 
+   "1.3803842646028867`*^6", ",", "1.4125375446227554`*^6", ",", 
+   "1.4454397707459282`*^6", ",", "1.4791083881682074`*^6", ",", 
+   "1.5135612484362072`*^6", ",", "1.5488166189124829`*^6", ",", 
+   "1.5848931924611141`*^6", ",", "1.62181009735893`*^6", ",", 
+   "1.6595869074375597`*^6", ",", "1.698243652461746`*^6", ",", 
+   "1.7378008287493763`*^6", ",", "1.778279410038923`*^6", ",", 
+   "1.8197008586099825`*^6", ",", "1.8620871366628692`*^6", ",", 
+   "1.9054607179632483`*^6", ",", "1.9498445997580455`*^6", ",", 
+   "1.9952623149688789`*^6", ",", "2.0417379446695317`*^6", ",", 
+   "2.0892961308540408`*^6", ",", "2.1379620895022326`*^6", ",", 
+   "2.187761623949552`*^6", ",", "2.2387211385683427`*^6", ",", 
+   "2.2908676527677746`*^6", ",", "2.3442288153199228`*^6", ",", 
+   "2.3988329190194895`*^6", ",", "2.4547089156850334`*^6", ",", 
+   "2.511886431509582`*^6", ",", "2.5703957827688647`*^6", ",", 
+   "2.630267991895382`*^6", ",", "2.691534803926914`*^6", ",", 
+   "2.754228703338169`*^6", ",", "2.818382931264455`*^6", ",", 
+   "2.8840315031266054`*^6", ",", "2.951209226666384`*^6", ",", 
+   "3.019951720402019`*^6", ",", "3.090295432513592`*^6", ",", 
+   "3.162277660168379`*^6", ",", "3.235936569296281`*^6", ",", 
+   "3.3113112148259142`*^6", ",", "3.388441561392028`*^6", ",", 
+   "3.4673685045253164`*^6", ",", "3.548133892335753`*^6", ",", 
+   "3.6307805477010175`*^6", ",", "3.715352290971728`*^6", ",", 
+   "3.8018939632056123`*^6", ",", "3.890451449942805`*^6", ",", 
+   "3.9810717055349774`*^6", ",", "4.0738027780411304`*^6", ",", 
+   "4.168693834703355`*^6", ",", "4.265795188015926`*^6", ",", 
+   "4.365158322401665`*^6", ",", "4.466835921509635`*^6", ",", 
+   "4.5708818961487515`*^6", ",", "4.677351412871981`*^6", ",", 
+   "4.786300923226381`*^6", ",", "4.897788193684466`*^6", ",", 
+   "5.011872336272725`*^6", ",", "5.128613839913648`*^6", ",", 
+   "5.248074602497723`*^6", ",", "5.370317963702533`*^6", ",", 
+   "5.495408738576248`*^6", ",", "5.623413251903491`*^6", ",", 
+   "5.754399373371566`*^6", ",", "5.888436553555896`*^6", ",", 
+   "6.02559586074358`*^6", ",", "6.165950018614821`*^6", ",", 
+   "6.30957344480193`*^6", ",", "6.456542290346563`*^6", ",", 
+   "6.606934480075965`*^6", ",", "6.760829753919819`*^6", ",", 
+   "6.918309709189363`*^6", ",", "7.079457843841388`*^6", ",", 
+   "7.244359600749906`*^6", ",", "7.413102413009177`*^6", ",", 
+   "7.5857757502918355`*^6", ",", "7.762471166286927`*^6", ",", 
+   "7.943282347242822`*^6", ",", "8.128305161640996`*^6", ",", 
+   "8.317637711026708`*^6", ",", "8.51138038202376`*^6", ",", 
+   "8.709635899560815`*^6", ",", "8.91250938133746`*^6", ",", 
+   "9.120108393559096`*^6", ",", "9.332543007969905`*^6", ",", 
+   "9.549925860214368`*^6", ",", "9.772372209558113`*^6", ",", "1.`*^7", ",", 
+   "1.0232929922807537`*^7", ",", "1.0471285480509007`*^7", ",", 
+   "1.0715193052376071`*^7", ",", "1.096478196143185`*^7", ",", 
+   "1.1220184543019628`*^7", ",", "1.1481536214968842`*^7", ",", 
+   "1.1748975549395304`*^7", ",", "1.2022644346174132`*^7", ",", 
+   "1.230268770812381`*^7", ",", "1.2589254117941687`*^7", ",", 
+   "1.288249551693135`*^7", ",", "1.3182567385564074`*^7", ",", 
+   "1.3489628825916534`*^7", ",", "1.3803842646028867`*^7", ",", 
+   "1.4125375446227554`*^7", ",", "1.4454397707459278`*^7", ",", 
+   "1.4791083881682072`*^7", ",", "1.5135612484362071`*^7", ",", 
+   "1.5488166189124826`*^7", ",", "1.5848931924611142`*^7", ",", 
+   "1.62181009735893`*^7", ",", "1.6595869074375596`*^7", ",", 
+   "1.698243652461746`*^7", ",", "1.7378008287493765`*^7", ",", 
+   "1.7782794100389227`*^7", ",", "1.8197008586099826`*^7", ",", 
+   "1.8620871366628695`*^7", ",", "1.905460717963248`*^7", ",", 
+   "1.9498445997580454`*^7", ",", "1.9952623149688788`*^7", ",", 
+   "2.0417379446695317`*^7", ",", "2.0892961308540408`*^7", ",", 
+   "2.1379620895022325`*^7", ",", "2.187761623949552`*^7", ",", 
+   "2.238721138568342`*^7", ",", "2.2908676527677745`*^7", ",", 
+   "2.3442288153199226`*^7", ",", "2.39883291901949`*^7", ",", 
+   "2.4547089156850334`*^7", ",", "2.5118864315095823`*^7", ",", 
+   "2.5703957827688646`*^7", ",", "2.6302679918953814`*^7", ",", 
+   "2.691534803926914`*^7", ",", "2.754228703338169`*^7", ",", 
+   "2.818382931264455`*^7", ",", "2.884031503126606`*^7", ",", 
+   "2.951209226666384`*^7", ",", "3.019951720402019`*^7", ",", 
+   "3.0902954325135916`*^7", ",", "3.1622776601683795`*^7", ",", 
+   "3.235936569296281`*^7", ",", "3.311311214825914`*^7", ",", 
+   "3.388441561392027`*^7", ",", "3.467368504525317`*^7", ",", 
+   "3.548133892335753`*^7", ",", "3.6307805477010176`*^7", ",", 
+   "3.715352290971728`*^7", ",", "3.8018939632056125`*^7", ",", 
+   "3.890451449942805`*^7", ",", "3.9810717055349775`*^7", ",", 
+   "4.07380277804113`*^7", ",", "4.168693834703355`*^7", ",", 
+   "4.265795188015926`*^7", ",", "4.365158322401665`*^7", ",", 
+   "4.466835921509635`*^7", ",", "4.570881896148752`*^7", ",", 
+   "4.677351412871981`*^7", ",", "4.78630092322638`*^7", ",", 
+   "4.897788193684466`*^7", ",", "5.011872336272725`*^7", ",", 
+   "5.128613839913648`*^7", ",", "5.248074602497723`*^7", ",", 
+   "5.370317963702533`*^7", ",", "5.495408738576248`*^7", ",", 
+   "5.623413251903491`*^7", ",", "5.754399373371567`*^7", ",", 
+   "5.8884365535558954`*^7", ",", "6.0255958607435815`*^7", ",", 
+   "6.165950018614822`*^7", ",", "6.30957344480193`*^7", ",", 
+   "6.456542290346563`*^7", ",", "6.606934480075964`*^7", ",", 
+   "6.760829753919819`*^7", ",", "6.918309709189363`*^7", ",", 
+   "7.079457843841387`*^7", ",", "7.244359600749907`*^7", ",", 
+   "7.413102413009177`*^7", ",", "7.585775750291836`*^7", ",", 
+   "7.762471166286927`*^7", ",", "7.943282347242822`*^7", ",", 
+   "8.128305161640996`*^7", ",", "8.317637711026709`*^7", ",", 
+   "8.511380382023776`*^7", ",", "8.709635899560815`*^7", ",", 
+   "8.912509381337458`*^7", ",", "9.120108393559097`*^7", ",", 
+   "9.332543007969904`*^7", ",", "9.549925860214369`*^7", ",", 
+   "9.772372209558113`*^7", ",", "1.`*^8", ",", "1.0232929922807537`*^8", ",",
+    "1.0471285480508985`*^8", ",", "1.0715193052376048`*^8", ",", 
+   "1.0964781961431874`*^8", ",", "1.1220184543019652`*^8", ",", 
+   "1.1481536214968842`*^8", ",", "1.1748975549395302`*^8", ",", 
+   "1.202264434617413`*^8", ",", "1.230268770812381`*^8", ",", 
+   "1.2589254117941663`*^8", ",", "1.2882495516931324`*^8", ",", 
+   "1.3182567385564102`*^8", ",", "1.348962882591656`*^8", ",", 
+   "1.3803842646028867`*^8", ",", "1.4125375446227553`*^8", ",", 
+   "1.445439770745928`*^8", ",", "1.479108388168207`*^8", ",", 
+   "1.5135612484362072`*^8", ",", "1.5488166189124796`*^8", ",", 
+   "1.584893192461111`*^8", ",", "1.621810097358933`*^8", ",", 
+   "1.6595869074375632`*^8", ",", "1.698243652461746`*^8", ",", 
+   "1.7378008287493762`*^8", ",", "1.7782794100389227`*^8", ",", 
+   "1.8197008586099827`*^8", ",", "1.862087136662866`*^8", ",", 
+   "1.9054607179632443`*^8", ",", "1.9498445997580495`*^8", ",", 
+   "1.9952623149688828`*^8", ",", "2.0417379446695316`*^8", ",", 
+   "2.0892961308540407`*^8", ",", "2.1379620895022327`*^8", ",", 
+   "2.187761623949552`*^8", ",", "2.2387211385683376`*^8", ",", 
+   "2.29086765276777`*^8", ",", "2.3442288153199273`*^8", ",", 
+   "2.398832919019495`*^8", ",", "2.4547089156850335`*^8", ",", 
+   "2.5118864315095824`*^8", ",", "2.5703957827688646`*^8", ",", 
+   "2.6302679918953812`*^8", ",", "2.691534803926914`*^8", ",", 
+   "2.7542287033381635`*^8", ",", "2.8183829312644494`*^8", ",", 
+   "2.884031503126612`*^8", ",", "2.9512092266663903`*^8", ",", 
+   "3.019951720402019`*^8", ",", "3.090295432513592`*^8", ",", 
+   "3.162277660168379`*^8", ",", "3.2359365692962813`*^8", ",", 
+   "3.311311214825908`*^8", ",", "3.3884415613920206`*^8", ",", 
+   "3.467368504525324`*^8", ",", "3.5481338923357606`*^8", ",", 
+   "3.630780547701018`*^8", ",", "3.7153522909717274`*^8", ",", 
+   "3.8018939632056123`*^8", ",", "3.8904514499428046`*^8", ",", 
+   "3.9810717055349696`*^8", ",", "4.073802778041122`*^8", ",", 
+   "4.168693834703363`*^8", ",", "4.265795188015934`*^8", ",", 
+   "4.3651583224016654`*^8", ",", "4.466835921509635`*^8", ",", 
+   "4.570881896148752`*^8", ",", "4.677351412871981`*^8", ",", 
+   "4.7863009232263803`*^8", ",", "4.8977881936844563`*^8", ",", 
+   "5.011872336272735`*^8", ",", "5.128613839913659`*^8", ",", 
+   "5.248074602497733`*^8", ",", "5.370317963702533`*^8", ",", 
+   "5.495408738576248`*^8", ",", "5.623413251903491`*^8", ",", 
+   "5.754399373371567`*^8", ",", "5.888436553555884`*^8", ",", 
+   "6.025595860743569`*^8", ",", "6.165950018614835`*^8", ",", 
+   "6.309573444801943`*^8", ",", "6.456542290346563`*^8", ",", 
+   "6.606934480075965`*^8", ",", "6.760829753919818`*^8", ",", 
+   "6.918309709189363`*^8", ",", "7.079457843841374`*^8", ",", 
+   "7.244359600749891`*^8", ",", "7.413102413009192`*^8", ",", 
+   "7.58577575029185`*^8", ",", "7.762471166286927`*^8", ",", 
+   "7.943282347242821`*^8", ",", "8.128305161640996`*^8", ",", 
+   "8.317637711026709`*^8", ",", "8.511380382023759`*^8", ",", 
+   "8.709635899560796`*^8", ",", "8.912509381337477`*^8", ",", 
+   "9.120108393559115`*^8", ",", "9.332543007969925`*^8", ",", 
+   "9.549925860214369`*^8", ",", "9.772372209558111`*^8", ",", "1.`*^9", ",", 
+   "1.0232929922807537`*^9", ",", "1.0471285480508984`*^9", ",", 
+   "1.0715193052376049`*^9", ",", "1.0964781961431873`*^9", ",", 
+   "1.1220184543019652`*^9", ",", "1.148153621496884`*^9", ",", 
+   "1.1748975549395304`*^9", ",", "1.202264434617413`*^9", ",", 
+   "1.230268770812381`*^9", ",", "1.258925411794166`*^9", ",", 
+   "1.2882495516931322`*^9", ",", "1.31825673855641`*^9", ",", 
+   "1.3489628825916562`*^9", ",", "1.3803842646028867`*^9", ",", 
+   "1.4125375446227553`*^9", ",", "1.445439770745928`*^9", ",", 
+   "1.4791083881682072`*^9", ",", "1.5135612484362073`*^9", ",", 
+   "1.5488166189124796`*^9", ",", "1.5848931924611175`*^9", ",", 
+   "1.621810097358933`*^9", ",", "1.659586907437563`*^9", ",", 
+   "1.698243652461746`*^9", ",", "1.7378008287493763`*^9", ",", 
+   "1.7782794100389228`*^9", ",", "1.8197008586099825`*^9", ",", 
+   "1.8620871366628656`*^9", ",", "1.9054607179632444`*^9", ",", 
+   "1.9498445997580495`*^9", ",", "1.9952623149688828`*^9", ",", 
+   "2.0417379446695316`*^9", ",", "2.089296130854041`*^9", ",", 
+   "2.1379620895022323`*^9", ",", "2.187761623949552`*^9", ",", 
+   "2.238721138568338`*^9", ",", "2.29086765276777`*^9", ",", 
+   "2.3442288153199277`*^9", ",", "2.3988329190194945`*^9", ",", 
+   "2.4547089156850333`*^9", ",", "2.511886431509582`*^9", ",", 
+   "2.5703957827688646`*^9", ",", "2.6302679918953815`*^9", ",", 
+   "2.6915348039269137`*^9", ",", "2.7542287033381634`*^9", ",", 
+   "2.8183829312644606`*^9", ",", "2.8840315031266117`*^9", ",", 
+   "2.9512092266663904`*^9", ",", "3.019951720402019`*^9", ",", 
+   "3.0902954325135922`*^9", ",", "3.16227766016838`*^9", ",", 
+   "3.235936569296281`*^9", ",", "3.3113112148259077`*^9", ",", 
+   "3.3884415613920207`*^9", ",", "3.4673685045253234`*^9", ",", 
+   "3.5481338923357606`*^9", ",", "3.630780547701018`*^9", ",", 
+   "3.715352290971728`*^9", ",", "3.801893963205612`*^9", ",", 
+   "3.8904514499428043`*^9", ",", "3.981071705534969`*^9", ",", 
+   "4.073802778041122`*^9", ",", "4.168693834703364`*^9", ",", 
+   "4.265795188015934`*^9", ",", "4.365158322401666`*^9", ",", 
+   "4.466835921509635`*^9", ",", "4.570881896148752`*^9", ",", 
+   "4.677351412871982`*^9", ",", "4.78630092322638`*^9", ",", 
+   "4.897788193684456`*^9", ",", "5.011872336272735`*^9", ",", 
+   "5.128613839913658`*^9", ",", "5.248074602497734`*^9", ",", 
+   "5.370317963702532`*^9", ",", "5.495408738576248`*^9", ",", 
+   "5.623413251903491`*^9", ",", "5.754399373371567`*^9", ",", 
+   "5.888436553555884`*^9", ",", "6.025595860743569`*^9", ",", 
+   "6.165950018614835`*^9", ",", "6.309573444801943`*^9", ",", 
+   "6.456542290346563`*^9", ",", "6.606934480075965`*^9", ",", 
+   "6.760829753919819`*^9", ",", "6.918309709189363`*^9", ",", 
+   "7.0794578438413725`*^9", ",", "7.244359600749891`*^9", ",", 
+   "7.4131024130091915`*^9", ",", "7.585775750291852`*^9", ",", 
+   "7.762471166286927`*^9", ",", "7.943282347242822`*^9", ",", 
+   "8.128305161640995`*^9", ",", "8.317637711026709`*^9", ",", 
+   "8.511380382023759`*^9", ",", "8.709635899560797`*^9", ",", 
+   "8.912509381337477`*^9", ",", "9.120108393559114`*^9", ",", 
+   "9.332543007969925`*^9", ",", "9.549925860214369`*^9", ",", 
+   "9.772372209558111`*^9", ",", "1.`*^10"}], "}"}]], "Output",
+ CellChangeTimes->{3.6800271144205723`*^9, 3.68002715929222*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", "data", "]"}]], "Input",
+ CellChangeTimes->{{3.680027100186232*^9, 3.6800271026213818`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", 
+   ",", "\<\"Inf\"\>", ",", "\<\"Inf\"\>", ",", "8.72058199879627`*^6", ",", 
+   "8.51518756509401`*^6", ",", "8.620724375665244`*^6", ",", 
+   "8.736378738201112`*^6", ",", "8.624706516360667`*^6", ",", 
+   "6.100517440250781`*^6", ",", "5.983830916065957`*^6", ",", 
+   "5.977469440516077`*^6", ",", "6.045412150702635`*^6", ",", 
+   "6.043500159202041`*^6", ",", "6.104605263812329`*^6", ",", 
+   "6.1036384780148445`*^6", ",", "4.1484277867013547`*^6", ",", 
+   "4.157878301407558`*^6", ",", "4.236892242017139`*^6", ",", 
+   "4.1516093116401634`*^6", ",", "4.199392677941386`*^6", ",", 
+   "4.240442515528145`*^6", ",", "4.201841926311139`*^6", ",", 
+   "2.899319578081695`*^6", ",", "2.9274261242465675`*^6", ",", 
+   "2.8741068153076223`*^6", ",", "2.897992025529577`*^6", ",", 
+   "2.862154588318162`*^6", ",", "2.933802587175843`*^6", ",", 
+   "2.9041007377123563`*^6", ",", "2.905850605660353`*^6", ",", 
+   "2.0652663626676379`*^6", ",", "2.0451202360123037`*^6", ",", 
+   "2.0464770382454703`*^6", ",", "2.0491165272814108`*^6", ",", 
+   "2.0512524838272624`*^6", ",", "2.0292785800948339`*^6", ",", 
+   "2.0965368206905616`*^6", ",", "2.0618984041323543`*^6", ",", 
+   "2.0597632220090039`*^6", ",", "2.066382009938953`*^6", ",", 
+   "1.5044662294997254`*^6", ",", "1.4944272288338826`*^6", ",", 
+   "1.5010999595719632`*^6", ",", "1.484188672897633`*^6", ",", 
+   "1.5034769949037586`*^6", ",", "1.448676829390502`*^6", ",", 
+   "1.4936127439872972`*^6", ",", "1.4966526960012112`*^6", ",", 
+   "1.514622023616836`*^6", ",", "1.502229184287481`*^6", ",", 
+   "1.522927349294152`*^6", ",", "1.491976174190976`*^6", ",", 
+   "1.1186916693014626`*^6", ",", "1.1466478234643564`*^6", ",", 
+   "1.1242134752650906`*^6", ",", "1.138724380196853`*^6", ",", 
+   "1.142318553964246`*^6", ",", "1.1347161295833404`*^6", ",", 
+   "1.1389402997825535`*^6", ",", "1.1530367911499734`*^6", ",", 
+   "1.1571204899783602`*^6", ",", "1.1506132215492108`*^6", ",", 
+   "1.174386474589234`*^6", ",", "1.159184995909659`*^6", ",", 
+   "1.163677888946131`*^6", ",", "1.1879757921692517`*^6", ",", 
+   "1.1852803082719282`*^6", ",", "1.178884882159603`*^6", ",", 
+   "909613.9832779157`", ",", "916817.5792474741`", ",", "931116.3081135224`",
+    ",", "932906.5651779113`", ",", "941051.9907512881`", ",", 
+   "950119.5873464554`", ",", "971283.7432202438`", ",", "974338.4081000721`",
+    ",", "980613.3368103794`", ",", "988972.1424625078`", ",", 
+   "1.0061430079541341`*^6", ",", "1.0111373873685496`*^6", ",", 
+   "1.0295234805493364`*^6", ",", "1.0413910648012348`*^6", ",", 
+   "1.0407808081218669`*^6", ",", "850262.5287423214`", ",", 
+   "868358.7548103642`", ",", "890922.4591556445`", ",", "897952.7228275045`",
+    ",", "910714.893471563`", ",", "910770.1744031092`", ",", 
+   "938222.8300392877`", ",", "945700.402018352`", ",", "961629.920392918`", 
+   ",", "978502.5898934789`", ",", "1.0012794819686561`*^6", ",", 
+   "1.0129846936259121`*^6", ",", "839804.7661407093`", ",", 
+   "855807.1664380997`", ",", "880183.0991048104`", ",", "888287.2773672377`",
+    ",", "905961.1127137931`", ",", "918132.6835875679`", ",", 
+   "949383.8493326401`", ",", "974537.3920719881`", ",", "985120.4789410344`",
+    ",", "819153.8652724058`", ",", "837540.5705820778`", ",", 
+   "855420.0438990156`", ",", "874925.7597451769`", ",", "892343.9821179876`",
+    ",", "916037.716778262`", ",", "930905.974661486`", ",", 
+   "961112.6721546749`", ",", "976179.4986512286`", ",", "959946.6418669842`",
+    ",", "979949.0661830915`", ",", "827235.8141088749`", ",", 
+   "855794.0670594341`", ",", "861641.2211383451`", ",", "895339.7173073976`",
+    ",", "913774.6247380148`", ",", "942226.394060756`", ",", 
+   "971219.6065681658`", ",", "884208.7237585289`", ",", "904507.7955320851`",
+    ",", "934430.1531464588`", ",", "966480.3012217759`", ",", 
+   "835738.1242823865`", ",", "853327.3092411534`", ",", "883370.755947958`", 
+   ",", "919912.1351046346`", ",", "946975.8745518056`", ",", 
+   "992200.6247324719`", ",", "846352.7020655606`", ",", "864394.4560487`", 
+   ",", "902948.1554589368`", ",", "944772.2495394641`", ",", 
+   "855165.1078800218`", ",", "893776.9131686246`", ",", "938138.3595019542`",
+    ",", "959692.4531645841`", ",", "917091.7900350903`", ",", 
+   "946476.9863526186`", ",", "982539.3309691387`", ",", "842421.0364408855`",
+    ",", "960731.1654399638`", ",", "829186.0085254018`", ",", 
+   "876873.1901884058`", ",", "914880.578473672`", ",", "962074.3826999057`", 
+   ",", "827503.7872850671`", ",", "853255.8956041597`", ",", 
+   "900044.3630328682`", ",", "937150.3631033523`", ",", "876386.0200332474`",
+    ",", "830305.982764929`", ",", "875089.2454537981`", ",", 
+   "917001.256854831`", ",", "958678.6613513675`", ",", "830198.9163287447`", 
+   ",", "866594.3710301378`", ",", "864374.7142719908`", ",", 
+   "905823.8044382026`", ",", "990167.5049558663`", ",", "990972.298731142`", 
+   ",", "843166.5314861503`", ",", "936711.1511716297`", ",", 
+   "948249.9595952202`", ",", "831157.0663255932`", ",", "873512.5010702916`",
+    ",", "931696.5905424398`", ",", "985081.032201692`", ",", 
+   "863334.3437108768`", ",", "914336.203684836`", ",", "945290.8847745298`", 
+   ",", "1.0022044731774181`*^6", ",", "849455.4289347123`", ",", 
+   "916142.8973617624`", ",", "988499.9020697337`", ",", "866344.9740796423`",
+    ",", "922519.0657134434`", ",", "983377.4733614923`", ",", 
+   "861873.9151171672`", ",", "912438.6474084096`", ",", "966402.5705284482`",
+    ",", "854352.2444699573`", ",", "902543.4907596628`", ",", 
+   "988159.5695440178`", ",", "875506.7729307443`", ",", "959758.5537069543`",
+    ",", "860861.6584653611`", ",", "929212.8866529425`", ",", 
+   "835159.1664886936`", ",", "867058.266865353`", ",", "995114.7983931962`", 
+   ",", "840586.7762002797`", ",", "907915.3826263453`", ",", 
+   "990430.7653403218`", ",", "889077.8942557715`", ",", "989785.4070807241`",
+    ",", "896243.6974476697`", ",", "928943.8497572269`", ",", 
+   "1.0079057501772047`*^6", ",", "902246.1850309528`", ",", 
+   "982031.6536665048`", ",", "1.0035092409586208`*^6", ",", 
+   "1.0025230286061148`*^6", ",", "865259.7840769303`", ",", 
+   "961771.2711472904`", ",", "899116.5982623841`", ",", "874164.9230043862`",
+    ",", "943140.8198051158`", ",", "996640.1115494075`", ",", 
+   "968988.61415134`", ",", "947051.4977907139`", ",", "950009.7371390958`", 
+   ",", "968577.0136475598`", ",", "975810.5499311774`", ",", 
+   "984307.255129394`", ",", "998062.3343835607`", ",", "952154.1041792417`", 
+   ",", "975186.6123959294`", ",", "1.0098943534463455`*^6", ",", 
+   "879531.0412684481`", ",", "866221.484665718`", ",", 
+   "1.0278934885031501`*^6", ",", "879481.5917682908`", ",", 
+   "885266.0649661899`", ",", "890382.8505077247`", ",", "941832.5586584383`",
+    ",", "915570.4667324116`", ",", "1.0189297551644762`*^6", ",", 
+   "952591.5253906915`", ",", "1.017574334751512`*^6", ",", 
+   "951856.1945993128`", ",", "961050.5374889933`", ",", "948182.4906376888`",
+    ",", "901806.8810950413`", ",", "884276.9369096736`", ",", 
+   "915482.5138023545`", ",", "945013.3545396078`", ",", 
+   "1.042862490871512`*^6", ",", "917406.4200869023`", ",", 
+   "1.0502702549056108`*^6", ",", "912309.8174097958`", ",", 
+   "981846.1531138166`", ",", "986538.6619179727`", ",", "962844.5350558987`",
+    ",", "929706.0893969015`", ",", "999139.3744465468`", ",", 
+   "1.0586495011869434`*^6", ",", "1.0153857811722114`*^6", ",", 
+   "981607.3175284737`", ",", "969622.3073237113`", ",", "915571.8063920949`",
+    ",", "938871.0118462072`", ",", "1.0706573932417354`*^6", ",", 
+   "921140.1232413505`", ",", "940219.8318587204`", ",", "951651.7431629703`",
+    ",", "964017.5337951273`", ",", "1.0877532591539982`*^6", ",", 
+   "970893.2710791373`", ",", "1.0050974677583204`*^6", ",", 
+   "977273.0657244719`", ",", "1.0048460910378267`*^6", ",", 
+   "996631.6554214577`", ",", "998835.4835203397`", ",", 
+   "1.0930754505481457`*^6", ",", "1.1229535684449065`*^6", ",", 
+   "1.1155726385516867`*^6", ",", "1.1054944431481722`*^6", ",", 
+   "1.0015134108654602`*^6", ",", "1.0452480375885023`*^6", ",", 
+   "1.1088800655737394`*^6", ",", "1.0444494881380054`*^6", ",", 
+   "1.1508833961515236`*^6", ",", "1.083609692138379`*^6", ",", 
+   "1.0106753174036023`*^6", ",", "1.0569653847502943`*^6", ",", 
+   "1.1423477340932447`*^6", ",", "1.1757009968341745`*^6", ",", 
+   "1.1518805867611305`*^6", ",", "1.1943182638647137`*^6", ",", 
+   "1.124847025160126`*^6", ",", "1.099848935504238`*^6", ",", 
+   "1.2418049996581827`*^6", ",", "1.1937286199727112`*^6", ",", 
+   "1.146059872923792`*^6", ",", "1.0985094800824288`*^6", ",", 
+   "1.223212442556221`*^6", ",", "1.1447096969557074`*^6", ",", 
+   "1.2087462906126133`*^6", ",", "1.2896219566177407`*^6", ",", 
+   "1.1878600378191876`*^6", ",", "1.1786502873747123`*^6", ",", 
+   "1.1668710571833556`*^6", ",", "1.2138832447170818`*^6", ",", 
+   "1.2065557519938408`*^6", ",", "1.3102130493471182`*^6", ",", 
+   "1.2534828041533746`*^6", ",", "1.348863201370118`*^6", ",", 
+   "1.2718827055993392`*^6", ",", "1.3177723075360344`*^6", ",", 
+   "1.3022959495150845`*^6", ",", "1.4252173946671877`*^6", ",", 
+   "1.32158129149102`*^6", ",", "1.4872910386241502`*^6", ",", 
+   "1.462278091891709`*^6", ",", "1.497756488922889`*^6", ",", 
+   "1.3875725843657155`*^6", ",", "1.4959159188839237`*^6", ",", 
+   "1.5517670317746806`*^6", ",", "1.5426639682557317`*^6", ",", 
+   "1.5562894662829873`*^6", ",", "1.577575863279076`*^6", ",", 
+   "1.5459518351818328`*^6", ",", "1.549431556990686`*^6", ",", 
+   "1.6473625685103973`*^6", ",", "1.6244833766776857`*^6", ",", 
+   "1.700963259961421`*^6", ",", "1.6999508630717131`*^6", ",", 
+   "1.6926641555394272`*^6", ",", "1.7156667173756429`*^6", ",", 
+   "1.8429771560423549`*^6", ",", "1.800153370662152`*^6", ",", 
+   "1.9201041979503864`*^6", ",", "1.8542712428045257`*^6", ",", 
+   "1.89211179398688`*^6", ",", "1.9926516405420871`*^6", ",", 
+   "1.9307413603469438`*^6", ",", "1.9546479470297163`*^6", ",", 
+   "2.06981987584803`*^6", ",", "2.0203623181740104`*^6", ",", 
+   "2.13727637058914`*^6", ",", "2.233169770587513`*^6", ",", 
+   "2.243496886450698`*^6", ",", "2.2662427455269243`*^6", ",", 
+   "2.4179593437016536`*^6", ",", "2.388200461085006`*^6", ",", 
+   "2.415533233096202`*^6", ",", "2.489195336786944`*^6", ",", 
+   "2.546634710046572`*^6", ",", "2.650283805649923`*^6", ",", 
+   "2.7415665712262415`*^6", ",", "2.7634435715101445`*^6", ",", 
+   "2.712318866558161`*^6", ",", "2.89457756586719`*^6", ",", 
+   "2.949916379245127`*^6", ",", "3.04463678615219`*^6", ",", 
+   "2.992693869810556`*^6", ",", "3.1547988039003634`*^6", ",", 
+   "3.1461155470133396`*^6", ",", "3.355728775158309`*^6", ",", 
+   "3.4301318068200285`*^6", ",", "3.5123443415853046`*^6", ",", 
+   "3.546637435587995`*^6", ",", "3.576327485851404`*^6", ",", 
+   "3.7057910210208166`*^6", ",", "3.927064754206206`*^6", ",", 
+   "3.9415946392560615`*^6", ",", "4.077398349735207`*^6", ",", 
+   "4.19449860906699`*^6", ",", "4.282322572067388`*^6", ",", 
+   "4.417563900772476`*^6", ",", "4.443110418351647`*^6", ",", 
+   "4.603006237565785`*^6", ",", "4.707442300454801`*^6", ",", 
+   "4.868531610406002`*^6", ",", "5.09012034053375`*^6", ",", 
+   "5.213727008518366`*^6", ",", "5.349364711075238`*^6", ",", 
+   "5.521484756003101`*^6", ",", "5.732875672133538`*^6", ",", 
+   "5.825959224180837`*^6", ",", "6.075417558303475`*^6", ",", 
+   "6.147575699632908`*^6", ",", "6.29571687204909`*^6", ",", 
+   "6.537128208161283`*^6", ",", "6.728861409795676`*^6", ",", 
+   "6.926290822958907`*^6", ",", "7.138043422537348`*^6", ",", 
+   "7.424491213061357`*^6", ",", "7.6906054677065695`*^6", ",", 
+   "7.825480757926319`*^6", ",", "8.025865019213892`*^6", ",", 
+   "8.311578557824974`*^6", ",", "8.624694361485306`*^6", ",", 
+   "8.895111211657593`*^6", ",", "9.140383687620334`*^6", ",", 
+   "9.484462832525237`*^6", ",", "9.670457119077466`*^6", ",", 
+   "9.980356777636347`*^6", ",", "9.91900916360339`*^6", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.680027103037002*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 755},
+WindowMargins->{{186, Automatic}, {-78, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 355, 8, 63, "Input"],
+Cell[916, 30, 504, 15, 28, "Input"],
+Cell[CellGroupData[{
+Cell[1445, 49, 418, 10, 46, "Input"],
+Cell[1866, 61, 49107, 1168, 415, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51010, 1234, 291, 8, 28, "Input"],
+Cell[51304, 1244, 30456, 471, 2416, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81797, 1720, 131, 2, 28, "Input"],
+Cell[81931, 1724, 20394, 297, 1468, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
