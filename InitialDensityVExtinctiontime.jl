@@ -37,7 +37,7 @@ end
 writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/initalvext.csv",t_ext);
 
 den_actual = [10*10^den_power[i] for i=1:l_den];
-initial_ext_plot=plot(x=den_actual,y=t_ext,Geom.point,Theme(default_point_size=1pt, highlight_width = 0pt),Scale.x_log10,Scale.y_log10,
+initial_ext_plot=plot(x=den_actual,y=t_ext,Geom.line,Theme(default_point_size=2pt, highlight_width = 0pt),Scale.x_log10,Scale.y_log10,
 Coord.cartesian(xmin=0,xmax=7,ymin=3,ymax=6),Guide.xlabel("Initial human density"),Guide.ylabel("Time to extinction"));
 
 draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_InitialvExtinct.pdf", 3inch, 3inch), initial_ext_plot)
