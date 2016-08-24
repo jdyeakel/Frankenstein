@@ -1,0 +1,152 @@
+\documentclass{article}[10pt]
+\usepackage{titling}
+\setlength{\droptitle}{-6em}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{textcomp}
+\usepackage{cite}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\makeatletter
+\makeatother
+
+\expandafter\let\csname equation*\endcsname\relax
+\expandafter\let\csname endequation*\endcsname\relax
+\usepackage{amsmath}
+\newcommand{\agt}{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\begin{document}
+
+\title{\emph{Frankenstein} and the horrors of competitive exclusion}
+
+
+\author{Nathaniel J. Dominy \& Justin D. Yeakel}
+
+\date{}
+% \begin{abstract}
+%
+%
+% \end{abstract}
+
+
+\maketitle
+\vspace{-1.5cm}
+Bicentennial celebration of the inception of \textit{Frankenstein} invites the present essay on Victor Frankenstein and his fateful decision to destroy an unfinished female creature. 
+The act itself was impulsive (caused by a `sensation of madness'), but it was preceded with agonized reasoning that would be familiar to any contemporary ecologist or evolutionary biologist. 
+Here we present a formal treatment of this reasoning. 
+Our results suggest that the central horror of Mary Shelley's novel lies in its prescient command of foundational concepts in ecology and evolution.
+
+
+
+Some background: Victor Frankenstein created and then disavowed a nameless male creature described as eight feet in height, and proportionally large. 
+For three years, the frightened creature wanders the European wilderness, becoming literate in three languages and well mannered. 
+He reunites with Frankenstein in Switzerland and pleads for a female companion `of the same species' to mitigate his loneliness. Crucially, and cleverly, the creature appears to anticipate and prempt concerns of direct competition with humans; he promises geographic isolation and emphasizes resource partitioning:
+
+
+\begin{displayquote}
+\emph{If you consent, neither you nor any other human being shall ever see us again: I will go to the vast wilds of South America. My food is not that of man; I do not destroy the lamb and the kid to glut my appetite; acorns and berries afford me sufficient nourishment. My companion will be of the same nature as myself, and will be content with the same fare. We shall make our bed of dried leaves; the sun will shine on us as on man, and will ripen our food.}
+\end{displayquote}
+
+Frankenstein concedes and consents to create a female creature. 
+However, he soon reflects on the potential for population growth and direct competition: \emph{a race of devils would be propagated upon earth who might make the very existence of the species of man a condition precarious and full of terror.}
+The nature of this terror is revealed when he considers the probability of human extinction: \emph{future ages might curse me as their pest, whose selfishness had not hesitated to buy its own peace at the price, perhaps, of the existence of the whole human race.}
+
+
+Here we indulge this conjecture by asking if and when a population of creatures $C$ could drive a population of humans $H$ to extinction.
+We elevate a tacit assumption to a formal parameter \textendash{that the intelligence, resilience, and dietary breadth of creatures confers a competitive advantage\textendash} and use a classic Lotka-Volterra competition framework to determine changes in population trajectories, where the effect of creatures on humans (which is always assumed to be harmful by direct or indirect competitive interaction) is $a_{HC}$ and the effect of humans on creatures is $a_{CH}$, where $a_{HC} > a_{CH}$ maintains a competitive advantage for creatures.
+Given growth rates for humans $r_H$ and creatures $r_C$, as well as a carrying capacity for both $k$, the 2-D continuous time model is written
+\vspace{-1mm}
+\begin{align}
+\dot{H}&=r_H H\left(1 - (H + a_{HC} C)/k\right), \\ \nonumber	
+\dot{C}&=r_C C\left(1 - (C + a_{CH} H)/k\right),
+\end{align}
+
+\noindent where human extinction is the inevitable outcome.
+However, the time to extinction could be as much as $t_e=10^8$ years, which is tantamount to species coexistence on any biological timescale.
+
+This outcome is hardly surprising given that the human population of 1816 would have exceeded a founding population of two creatures by nine orders of magnitude.
+The population of Europe was then $178\times 10^6$, whereas the global population was $1.01\times 10^9$ (with an assumed carrying capacity of $k=10^{10}$).
+Given a human growth rate (= birth rate - death rate) of $r_H=0.0067$, there is little reason for Frankenstein to envision conditions of imminent extinction. 
+Yet the creature is known to have recovered from a gunshot wound that `shattered flesh and bone,' suggesting that reanimated tissue is resistant to necrosis. 
+If undead tissue dies at a slower rate than human tissue, then it follows that creatures would have a correspondingly lower death rate, such that the overall growth rate is $r_C=1.5\times$ that of humans.
+
+
+These parameters shed new light on Frankenstein's decision to destroy his unfinished female creature.
+If we assume direct competition with humans in 1816, and if we allow the competitive advantage of creatures to vary from $\epsilon=2\times$ to $\epsilon=10\times$ that of humans, then we can assess extinction time as a function of competition.
+In other words, $a_{HC} = \epsilon a_{CH}$, where the effect of creatures on humans is $\epsilon \times$ the effect of humans on creatures.
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+\singlespacing
+  \vspace{-35pt}
+  \begin{center}
+    \includegraphics[width=0.25\textwidth]{fig_combined.pdf}
+  \end{center}
+  \vspace{-15pt}
+  \caption{\footnotesize 
+  A. Extinction time given competitive environment.
+  B. Population trajectories for humans (blue) and creatures (green) given initial growth in the Amazon (dotted) and Europe (solid).
+  C. Time to extinction vs. the human population size during initial growth of the creature population.
+  }
+  \vspace{2pt}
+    \label{fig}
+\end{wrapfigure}
+When competition is low, the time to human extinction is effectively infinite, meaning that creatures and humans can coexist (Fig. 1A).
+However, as competition increases, our model shows that the time to human extinction drops precipitously to a minimum and then increases, an effect that becomes more exaggerated as the competitive advantages of creatures increase.
+Intriguingly, if the overall level of competition is high, the creatures are doomed to extinction despite their competitive advantage, such that the time to human extinction is also infinite.
+This result occurs because the population of creatures begins at $n=2$ individuals, whereas human populations are much larger, an asymmetry that prevents creatures from gaining a competitive foothold.
+The global model reveals that in the worst case scenario ($a_{HC}=3.5, \epsilon=10$), the time to human extinction is $t_e = 4188$ years.
+
+Given the discrepancy in the population sizes of creatures and humans, it is worth considering the effects of different environmental parameters at the onset of interactions.
+Recall that the creature promised to inhabit ``the vast wilds of South America" in an apparent gesture of conciliation.
+We explored the effects of this dispersal event by comparing competitive interactions with humans in the Amazon catchment (dotted curves, Fig. 1A,B) and Europe (solid curves, Fig. 1A,B).
+We assume that when the creature population grows to equal the human density in the initial environment (i.e. either the Amazon or Europe), it then begins competing directly with the global human population.
+
+A founding population of two creatures in the Amazon (green dotted line, Fig. 1B) would quickly surpass the local human population (blue dotted line, Fig. 1B -- the vertical jump denotes the transition from regional to global competition) and drive humans to extinction faster than competition in Europe between creatures (green solid line, Fig. 1B) and humans (blue solid line, Figure 1B).
+The lower $t_e$ for this scenario holds across all levels of competition and for all values of $\epsilon$ (Fig. 1A).
+The wilds of South America would therefore accelerate the population growth of creatures, at least compared to the slower dynamics that would have occurred in Europe with its larger human population.
+In fact, if human density in the initial environment is too low, not enough of a foothold is gained by the creature population and invasion becomes unlikely; if it is too high, the asymmetry in population sizes also limits invasibility.
+However, if there is a moderate density of humans in the initial environment, the effects on creature population growth are maximized, and the invading organism can substantially lower the time to extinction of the resident population (Fig. 1C).
+
+Our model is drawn from a classic work of fiction but it reinforces the underlying cautionary tale: that an anthropogenic species could hasten our own extinction. 
+This result casts new light on the creature and his motives for inhabiting the wilds of South America, a lower-competition environment.
+It also supports the speculative concerns of Frankenstein \textendash that humans would face species interactions ``full of terror." 
+Close reading of the text suggests that the nature of this terror is one of competitive exclusion and extinction, Darwinian concepts that escaped definition until the early 20th Century. 
+We conclude by suggesting that the central horror and genius of Mary Shelley's novel lies in its anticipation and mastery of foundational concepts in ecology and evolution.
+%Indeed, the creature's concession to escape to the wilds of South America may have been a worst-case scenario, motivating Frankenstein to destroy the creature's companion, and eventually leading to the deaths of those he loved as well as his own.
+
+%In Europe, XXXX years elapse before the creature population (green solid lines, Fig. 1B) overtakes humans (blue solid lines, Fig. 1B), and an additional XXXX years for it to drive humans extinct (we note that humans are assumed to have reached global carrying capacity by the time the creature population can compete globally). 
+%If the creatures begins reproducing in the Amazon, XXXX elapse before the Amazon is overtaken, with another XXXX years before the global population of humans are driven extinct.
+
+%The general conclusion -- invading via a catalyst
+%We have shown with a simple model that the initial population growth of an invading organism (the creature) within a low-density -- and by extension low-competition -- environment can catalyze the invader's success, lowering the timescale of invasion to the exclusion of a resident species (humans).
+%Many invading species in ecological systems have competitive advantages over residents such that even small competitive effects on the resident can lead to extinction over ecological timescales, and this also holds for Frankenstein's potential derivation of creature population growth (Fig. 1A).
+%The decision that Frankenstein makes, at the cost of his own destruction, was thus prescient, demonstrating that Shelley had an implicit understanding of the dynamics and potential horrors of niche overlap and competitive exclusion of invading species.
+%These issues are pertinent to our own world, which is now replete with \emph{creatures}:
+%species left to invade after native environments are destroyed or fragmented,
+%species that are distributed across the world by global transportation networks,
+%and species that are created or modified to suite our own needs.
+%In the bicentennial of Mary Shelley's Frankenstein, perhaps there is no better time to reconsider Frankenstein's creation and the horrors of competitive exclusion.
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

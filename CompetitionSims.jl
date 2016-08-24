@@ -20,6 +20,7 @@ plot(
 
 ########################
 
+#The global scenario
 avec = collect(1.0:0.05:10.0);
 lavec = length(avec);
 cvec = collect(1.0:1.0:10.0);
@@ -71,6 +72,9 @@ end
 
 
 ############## The European catalyst
+using ODE
+using Gadfly
+include("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/src/frank_comp.jl")
 
 avec = collect(1.0:0.05:10.0);
 lavec = length(avec);
@@ -106,8 +110,8 @@ for j=1:lcvec
     hden=den[:,1];
     mden=den[:,2];
     #When do monsters outnumber humans? At this point, we assume they will expand...
-    test_func = mden-hden;
-    pos_outnum = find(x->x>0,test_func);
+    test_func = mden-(0.9*k);
+    pos_outnum = find(x->x>=0,test_func);
     if length(pos_outnum)==0
       t_extEU[i,j] = Inf;
     else
@@ -148,7 +152,7 @@ for j=1:lcvec
 end #end j
 
 
-writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textEU_lowdeath.csv",t_extEU);
+writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textEU_lowdeath2k.csv",t_extEU);
 
 
 
@@ -201,8 +205,8 @@ for j=1:lcvec
     hden=den[:,1];
     mden=den[:,2];
     #When do monsters outnumber humans? At this point, we assume they will expand...
-    test_func = mden-hden;
-    pos_outnum = find(x->x>0,test_func);
+    test_func = mden-(0.9*k);
+    pos_outnum = find(x->x>=0,test_func);
     if length(pos_outnum)==0
       t_extam[i,j] = Inf;
     else
@@ -242,11 +246,11 @@ for j=1:lcvec
   print(j)
 end #end j
 
-writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam2_lowdeath.csv",t_extam);
+writedlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam2_lowdeath2k.csv",t_extam);
 
 
-t_extam=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam2_lowdeath.csv");
-t_ext=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textEU_lowdeath.csv");
+t_extam=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textam2_lowdeath2k.csv");
+t_ext=readdlm("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/d_textEU_lowdeath2k.csv");
 
 ext_plot=plot(
 [layer(y=t_ext[:,j],x=avec, Geom.line, Theme(default_color=colorant"black")) for j in 1:lcvec]...,
@@ -254,10 +258,10 @@ ext_plot=plot(
 [layer(y=t_extam[:,j],x=avec, Geom.line, Theme(default_color=colorant"black")) for j in 1:lcvec]...,
 [layer(y=t_extam[:,j],x=avec, Geom.point, Theme(default_color=colorant"black",default_point_size=1pt, highlight_width = 0pt)) for j in 1:lcvec]...,
 
-Coord.Cartesian(xmin=1, xmax=9, ymin=4000,ymax=1.5*10^4),
+Coord.Cartesian(xmin=1, xmax=10, ymin=4000,ymax=1.5*10^4),
 Guide.xlabel("Creature competitiveness"),Guide.ylabel("Time to human extinction"));
 
-draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_ext_AmCat.pdf", 3inch, 3inch), ext_plot)
+draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_ext_AmCat2.pdf", 3inch, 3inch), ext_plot)
 
 
 
@@ -293,7 +297,7 @@ den = hcat(den...)';
 hden=den[:,1];
 mden=den[:,2];
 #When do monsters outnumber humans? At this point, we assume they will expand...
-test_func = mden-hden;
+test_func = mden-(0.9*k);
 pos_outnum = find(x->x>0,test_func);
 if length(pos_outnum)==0
   t_extEU[i,j] = Inf;
@@ -357,7 +361,7 @@ den = hcat(den...)';
 hden=den[:,1];
 mden=den[:,2];
 #When do monsters outnumber humans? At this point, we assume they will expand...
-test_func = mden-hden;
+test_func = mden-(0.9*k);
 pos_outnum = find(x->x>0,test_func);
 if length(pos_outnum)==0
   t_extam[i,j] = Inf;
@@ -411,6 +415,6 @@ layer(x=TdenAM[:,1],y=TdenAM[:,3],Geom.line,Theme(default_color=colorant"green")
 #European Catalyst
 layer(x=TdenEU[:,1],y=TdenEU[:,2],Geom.line,Theme(default_color=colorant"blue")),
 layer(x=TdenEU[:,1],y=TdenEU[:,3],Geom.line,Theme(default_color=colorant"green")),
-Scale.x_log10,Scale.y_log10,Coord.cartesian(ymin=0,ymax=12,xmin=3.0,xmax=4.0),Guide.xlabel("Time after 1816"),Guide.ylabel("Population density"));
+Scale.x_log10,Scale.y_log10,Coord.cartesian(ymin=0,ymax=12,xmin=0.0,xmax=4.0),Guide.xlabel("Time after 1816"),Guide.ylabel("Population density"));
 
-draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_trajEUAM.pdf", 3inch, 3inch), traj_plot)
+draw(PDF("$(homedir())/Dropbox/PostDoc/2016_Frankenstein/fig_trajEUAM2.pdf", 3inch, 3inch), traj_plot)
